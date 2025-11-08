@@ -664,13 +664,64 @@
         }
         
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .subtitle { font-size: 1rem; }
-            nav ul { gap: 1rem; font-size: 0.8rem; }
+            h1 { font-size: 1.8rem; line-height: 1.4; }
+            .subtitle { font-size: 0.95rem; line-height: 1.6; }
+            nav ul { gap: 0.8rem; font-size: 0.75rem; padding: 0 0.5rem; }
+            nav a { letter-spacing: 1px; }
             section { padding: 3rem 1rem; }
+            section h2 { font-size: 2rem; }
+            section h3 { font-size: 1.3rem; }
+            .section-intro { font-size: 1rem; }
             .features { grid-template-columns: 1fr; }
             .newsletter { flex-direction: column; }
-            .hero-content { padding: 2rem; }
+            .hero-content { padding: 2rem 1.5rem; }
+            .hero { padding: 8rem 1rem 3rem; }
+            .cta-primary { padding: 1rem 2rem; font-size: 0.95rem; }
+            .cta-secondary { padding: 1rem 1.5rem; font-size: 0.9rem; }
+            .feature-card { padding: 2rem 1.5rem; }
+            .feature-number { font-size: 2rem; }
+            .feature-card h4 { font-size: 1.2rem; }
+            .problem-item { padding: 1.5rem; }
+            .problem-item h4 { font-size: 1.2rem; }
+            .trust-item { padding: 1.5rem; }
+            .trust-item h4 { font-size: 1.2rem; }
+            .benefits-table th, .benefits-table td { padding: 1rem; font-size: 0.9rem; }
+            .pricing-table th, .pricing-table td { padding: 1rem; font-size: 0.9rem; }
+            .price-special { font-size: 1.8rem; }
+            .benefits-list li { padding: 1.2rem; font-size: 0.9rem; }
+            .deadline { font-size: 1rem; padding: 1.5rem; }
+            .closing h2 { font-size: 1.8rem; }
+            .closing p { font-size: 1rem; }
+            .testimonial { padding: 1.5rem; font-size: 1rem; }
+            .ornate-divider { width: 150px; }
+        }
+        
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem; }
+            .subtitle { font-size: 0.85rem; }
+            nav { padding: 1rem 0; }
+            nav ul { gap: 0.5rem; font-size: 0.7rem; flex-wrap: wrap; }
+            section { padding: 2rem 0.8rem; }
+            section h2 { font-size: 1.6rem; }
+            section h3 { font-size: 1.1rem; }
+            .section-intro { font-size: 0.9rem; }
+            .hero { padding: 7rem 0.8rem 2rem; }
+            .hero-content { padding: 1.5rem 1rem; }
+            .cta-primary { padding: 0.9rem 1.5rem; font-size: 0.85rem; }
+            .feature-card { padding: 1.5rem 1rem; }
+            .problem-item { padding: 1.2rem; }
+            .trust-item { padding: 1.2rem; }
+            .benefits-table th, .benefits-table td { padding: 0.8rem; font-size: 0.85rem; }
+            .pricing-table th, .pricing-table td { padding: 0.8rem; font-size: 0.85rem; }
+            .price-special { font-size: 1.5rem; }
+            .benefits-list li { padding: 1rem; font-size: 0.85rem; }
+            .benefits-list li::before { font-size: 1rem; }
+            .deadline { font-size: 0.9rem; padding: 1.2rem; }
+            .closing h2 { font-size: 1.5rem; }
+            .closing p { font-size: 0.9rem; }
+            .testimonial { padding: 1.2rem; font-size: 0.9rem; }
+            .newsletter input { font-size: 0.9rem; padding: 1rem; }
+            .newsletter button { font-size: 0.9rem; padding: 1rem 1.5rem; }
         }
         
         @keyframes float {
@@ -689,6 +740,7 @@
             <li><a href="#problem">문제</a></li>
             <li><a href="#solution">솔루션</a></li>
             <li><a href="#benefits">혜택</a></li>
+            <li><a href="#demo">체험</a></li>
             <li><a href="#trust">신뢰</a></li>
             <li><a href="#pricing">가격</a></li>
             <li><a href="#cta">신청</a></li>
@@ -846,21 +898,244 @@
         <h3>유성호텔 313호의 비밀을 직접 경험해보세요</h3>
         <p class="section-intro">게임의 첫 번째 단서를 풀어보고, 당신이 탐정이 될 준비가 되었는지 확인하세요.</p>
         
-        <div style="max-width: 800px; margin: 3rem auto; background: linear-gradient(135deg, rgba(77, 92, 108, 0.9), rgba(121, 107, 138, 0.7)); padding: 3rem; border: 3px double var(--midnight-purple); border-radius: 15px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);">
+        <div class="demo-container">
             
             <div style="text-align: center; margin-bottom: 2rem;">
-                <div style="display: inline-block; padding: 1rem 2rem; background: rgba(139, 69, 96, 0.3); border: 2px solid var(--spa-pink); border-radius: 10px;">
+                <div class="demo-header">
                     <h4 style="color: var(--spa-pink); font-family: 'Cinzel', serif; font-size: 1.3rem; margin-bottom: 0.5rem;">📜 할머니의 암호 편지</h4>
                     <p style="font-size: 0.9rem; color: var(--copper-green);">1975년 3월 15일 작성</p>
                 </div>
             </div>
             
-            <div style="background: rgba(255, 245, 230, 0.95); padding: 2.5rem; border: 2px solid var(--copper-green); border-radius: 10px; font-family: 'Noto Serif KR', serif; color: var(--urban-navy); line-height: 2; box-shadow: inset 0 0 20px rgba(139, 69, 96, 0.1); position: relative;">
+            <div class="demo-letter">
                 <div style="position: absolute; top: 10px; right: 10px; color: var(--spa-pink); font-size: 2rem; opacity: 0.3;">✦</div>
                 <div style="position: absolute; bottom: 10px; left: 10px; color: var(--spa-pink); font-size: 2rem; opacity: 0.3;">✦</div>
                 
                 <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">사랑하는 손녀에게,</p>
-                <p style="margin-bottom: 1rem;">그날 밤, <strong style="color: var(--midnight-purple);">313호</strong>의 시
+                <p style="margin-bottom: 1rem;">그날 밤, <strong style="color: var(--midnight-purple);">313호</strong>의 시계는 <span style="background: linear-gradient(to right, var(--spa-pink), var(--copper-green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">밤 11시 47분</span>을 가리키고 있었단다.</p>
+                <p style="margin-bottom: 1rem;">진실은 언제나 <strong style="color: var(--midnight-purple);">세 가지 장소</strong>에 나누어 숨겨져 있지.</p>
+                <p style="margin-bottom: 1.5rem; font-style: italic; color: var(--copper-green);">"첫 번째는 온천의 증기 속에서, 두 번째는 황금빛 지붕 아래서, 세 번째는 시간이 멈춘 방 안에서."</p>
+                <p style="text-align: right; margin-top: 2rem; font-size: 1rem;">언제나 너를 사랑하는,<br><strong style="color: var(--spa-pink);">할머니</strong></p>
+            </div>
+            
+            <div class="demo-quiz">
+                <h4 style="color: var(--spa-pink); font-size: 1.3rem; margin-bottom: 1.5rem; font-family: 'Cinzel', serif; text-align: center;">🔍 첫 번째 질문</h4>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">할머니가 남긴 단서를 바탕으로, 313호에서 사건이 발생한 정확한 시각은 언제일까요?</p>
+                
+                <div class="demo-buttons">
+                    <button onclick="checkAnswer('wrong1', this)" class="quiz-btn">A) 1975년 3월 15일 밤 11시 47분</button>
+                    <button onclick="checkAnswer('wrong2', this)" class="quiz-btn">B) 1970년대 어느 날 밤</button>
+                    <button onclick="checkAnswer('correct', this)" class="quiz-btn">C) 편지 작성일과 사건 발생일은 별개이며, 정확한 시각은 추가 단서 필요</button>
+                    <button onclick="checkAnswer('wrong3', this)" class="quiz-btn">D) 1975년 3월 15일 정오</button>
+                </div>
+                
+                <div id="result" class="demo-result"></div>
+            </div>
+            
+            <div class="demo-tip">
+                <p style="font-size: 1rem; color: var(--ivory-ledger); line-height: 1.8;">💡 <strong style="color: var(--spa-pink);">탐정 팁:</strong> 진짜 추리는 주어진 정보만으로 성급한 결론을 내리지 않습니다.<br>할머니의 편지는 <strong style="color: var(--copper-green);">'사건 당일'</strong>이 아닌 <strong style="color: var(--copper-green);">'회상'</strong>일 가능성이 높습니다.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <p style="font-size: 1.2rem; color: var(--spa-pink); font-weight: 700; margin-bottom: 1rem;">이것은 시작에 불과합니다</p>
+            <p style="font-size: 1rem; color: var(--ivory-ledger); margin-bottom: 2rem;">실제 게임에는 20개 이상의 복합 단서와<br>대전 유성온천 지역을 누비는 실제 탐험이 기다립니다</p>
+            <a href="#cta" style="display: inline-block; padding: 1.2rem 3rem; background: linear-gradient(135deg, var(--spa-pink), #c88fa0); color: var(--urban-navy); text-decoration: none; font-weight: 900; border-radius: 50px; font-family: 'Cinzel', serif; transition: all 0.3s; border: 2px solid var(--midnight-purple);">정식 게임 예약하기 →</a>
+        </div>
+    </section>
+    
+    <style>
+        .demo-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            background: linear-gradient(135deg, rgba(77, 92, 108, 0.9), rgba(121, 107, 138, 0.7));
+            padding: 3rem;
+            border: 3px double var(--midnight-purple);
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .demo-header {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(139, 69, 96, 0.3);
+            border: 2px solid var(--spa-pink);
+            border-radius: 10px;
+        }
+        
+        .demo-letter {
+            background: rgba(255, 245, 230, 0.95);
+            padding: 2.5rem;
+            border: 2px solid var(--copper-green);
+            border-radius: 10px;
+            font-family: 'Noto Serif KR', serif;
+            color: var(--urban-navy);
+            line-height: 2;
+            box-shadow: inset 0 0 20px rgba(139, 69, 96, 0.1);
+            position: relative;
+        }
+        
+        .demo-quiz {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(77, 92, 108, 0.5);
+            border: 2px solid var(--copper-green);
+            border-radius: 10px;
+        }
+        
+        .demo-buttons {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .quiz-btn {
+            padding: 1.2rem;
+            background: rgba(255, 245, 230, 0.1);
+            border: 2px solid var(--copper-green);
+            color: var(--ivory-ledger);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: left;
+        }
+        
+        .quiz-btn:hover:not(:disabled) {
+            background: rgba(245, 199, 215, 0.2);
+            border-color: var(--spa-pink);
+            transform: translateX(5px);
+        }
+        
+        .demo-result {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: none;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        .demo-tip {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(245, 199, 215, 0.1);
+            border: 2px dashed var(--spa-pink);
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .demo-container {
+                padding: 2rem 1.5rem;
+                margin: 2rem 1rem;
+            }
+            .demo-letter {
+                padding: 1.5rem;
+                font-size: 0.95rem;
+                line-height: 1.8;
+            }
+            .demo-letter p {
+                font-size: 0.95rem !important;
+                margin-bottom: 0.8rem !important;
+            }
+            .demo-quiz {
+                padding: 1.5rem;
+            }
+            .demo-quiz h4 {
+                font-size: 1.1rem !important;
+            }
+            .demo-quiz > p {
+                font-size: 0.95rem !important;
+            }
+            .quiz-btn {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            .demo-result {
+                font-size: 0.95rem !important;
+                padding: 1.2rem;
+            }
+            .demo-tip {
+                padding: 1.5rem;
+            }
+            .demo-tip p {
+                font-size: 0.9rem !important;
+            }
+            .demo-header h4 {
+                font-size: 1.1rem !important;
+            }
+            .demo-header p {
+                font-size: 0.85rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #demo {
+                padding: 3rem 0.8rem !important;
+            }
+            .demo-container {
+                padding: 1.5rem 1rem;
+                margin: 1.5rem 0.5rem;
+            }
+            .demo-header {
+                padding: 0.8rem 1.5rem;
+            }
+            .demo-header h4 {
+                font-size: 1rem !important;
+            }
+            .demo-letter {
+                padding: 1.2rem;
+                font-size: 0.85rem;
+                line-height: 1.7;
+            }
+            .demo-letter p {
+                font-size: 0.85rem !important;
+                margin-bottom: 0.7rem !important;
+            }
+            .demo-letter strong {
+                font-size: 0.9rem;
+            }
+            .demo-quiz {
+                padding: 1.2rem;
+                margin-top: 2rem;
+            }
+            .demo-quiz h4 {
+                font-size: 1rem !important;
+                margin-bottom: 1rem !important;
+            }
+            .demo-quiz > p {
+                font-size: 0.85rem !important;
+                margin-bottom: 1.2rem !important;
+            }
+            .quiz-btn {
+                padding: 0.9rem;
+                font-size: 0.8rem;
+            }
+            .demo-result {
+                font-size: 0.85rem !important;
+                padding: 1rem;
+                margin-top: 1.5rem;
+            }
+            .demo-result > div:first-child {
+                font-size: 1.5rem !important;
+            }
+            .demo-result > div:nth-child(2) {
+                font-size: 1.1rem !important;
+            }
+            .demo-result p {
+                font-size: 0.8rem !important;
+            }
+            .demo-tip {
+                padding: 1.2rem;
+                margin-top: 2rem;
+            }
+            .demo-tip p {
+                font-size: 0.8rem !important;
+                line-height: 1.6;
+            }
+        }
+    </style>
         <h2>당신이 놓친 도시의 이야기가,<br>당신의 추리를 기다립니다</h2>
         <p>매일 반복되는 지루한 심야를, 지적 매혹과 고품질 비주얼로 가득 채우세요.</p>
         <p>시티코드 미스터리 디자이너가 설계한 대전의 숨겨진 코드를 해독할 첫 번째 탐정이 되어 주세요.</p>
